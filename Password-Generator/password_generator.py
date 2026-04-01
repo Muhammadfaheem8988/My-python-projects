@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 
 def generate_password(length, use_digits=True, use_special=True):
@@ -21,7 +21,7 @@ def generate_password(length, use_digits=True, use_special=True):
     if not characters:
         return ""
 
-    password = ''.join(random.choice(characters) for _ in range(length))
+    password = ''.join(secrets.choice(characters) for _ in range(length))
     return password
 
 def main():
